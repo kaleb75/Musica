@@ -82,3 +82,30 @@ footer a {
     color: #d4af37;
     text-decoration: none;
 }
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #c0c0c0;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el logo y el título */
+}
+
+#logo {
+    height: 50px; /* Tamaño del logo */
+    width: 50px; /* Asegura que sea cuadrado */
+    border-radius: 50%; /* Redondeado para mejor diseño */
+    border: 2px solid #d4af37; /* Borde dorado */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+}
+
+header h1 {
+    color: #d4af37;
+    margin: 0;
+    font-size: 1.8rem; /* Ajusta el tamaño del texto */
+}
