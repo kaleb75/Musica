@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const navLinks = document.querySelectorAll('nav ul li a');
     const pdfList = document.getElementById('pdf-list');
+    const pdfFrame = document.getElementById('pdf-frame');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -34,8 +35,16 @@ document.addEventListener('DOMContentLoaded', function() {
         pdfs[category].forEach(pdf => {
             const pdfItem = document.createElement('div');
             pdfItem.classList.add('pdf-item');
-            pdfItem.innerHTML = `<a href="${pdf.file}" target="_blank">${pdf.title}</a>`;
+            pdfItem.innerHTML = `<a href="#">${pdf.title}</a>`;
+            pdfItem.addEventListener('click', function() {
+                viewPDF(pdf.file);
+            });
             pdfList.appendChild(pdfItem);
         });
+    }
+
+    function viewPDF(file) {
+        pdfFrame.src = file;
+        pdfFrame.style.display = 'block';
     }
 });

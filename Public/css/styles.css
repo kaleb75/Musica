@@ -57,12 +57,18 @@ main {
     padding: 15px;
     width: 200px;
     text-align: center;
+    cursor: pointer;
 }
 
 .pdf-item a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+}
+
+#pdf-viewer {
+    margin-top: 20px;
+    text-align: center;
 }
 
 footer {
@@ -75,6 +81,4 @@ footer {
 footer a {
     color: #d4af37;
     text-decoration: none;
-}   
-
-
+}
