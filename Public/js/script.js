@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Definición de los PDFs organizados por categorías
     const pdfs = {
         acordes: [
             { title: 'Acorde 1', file: 'pdfs/acordes/acorde1.pdf' },
@@ -18,10 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
     };
 
+    // Selección de los elementos del DOM
     const navLinks = document.querySelectorAll('nav ul li a');
     const pdfList = document.getElementById('pdf-list');
     const pdfFrame = document.getElementById('pdf-frame');
 
+    // Añadir eventos de clic a los enlaces de navegación
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
@@ -30,8 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Función para cargar los PDFs de una categoría específica
     function loadPDFs(category) {
-        pdfList.innerHTML = '';
+        pdfList.innerHTML = ''; // Limpiar la lista de PDFs
         pdfs[category].forEach(pdf => {
             const pdfItem = document.createElement('div');
             pdfItem.classList.add('pdf-item');
@@ -43,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Función para visualizar el PDF en el iframe
     function viewPDF(file) {
         pdfFrame.src = file;
         pdfFrame.style.display = 'block';
